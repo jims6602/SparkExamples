@@ -1,0 +1,21 @@
+group 'jims6602'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets{
+	main.java.srcDir "src/main"
+	test.java.srcDir "src/test"
+}
+
+dependencies {
+    compile group: 'org.apache.spark', name: 'spark-core_2.10', version: '2.0.0'
+    compile group: 'org.apache.spark', name: 'spark-sql_2.10', version: '2.1.0'
+}
